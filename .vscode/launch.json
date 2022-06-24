@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run API",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start:debug"],
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "internalConsole",
+      "env": {
+        "TS_NODE_IGNORE": "false",
+        "TS_NODE_PROJECT": "${workspaceRoot}/api/tsconfig.json"
+      },
+      "cwd": "${workspaceRoot}/api"
+    },
+    {
+      "name": "Run UI",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart",
+      "console": "internalConsole",
+      "env": {
+        "TS_NODE_IGNORE": "false",
+        "TS_NODE_PROJECT": "${workspaceRoot}/ui/tsconfig.json"
+      },
+      "cwd": "${workspaceRoot}/ui"
+    },
+    {
+      "name": "Listen API",
+      "type": "node",
+      "request": "attach",
+      "port": 9229
+    },
+    {
+      "name": "Listen UI",
+      "type": "node",
+      "request": "attach",
+      "port": 9230
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: api
+    ports:
+      - "${API_PORT:-3001}:80"
+    environment:
+      - SWAGGER_ACTIVE=true
+    networks:
+      - localsearch
+  ui:
+    build:
+      context: ui
+      # dockerfile: Dockerfile.nginx
+    ports:
+      - "${UI_PORT:-3000}:80"
+    depends_on:
+      - api
+networks:
+  localsearch:
+    driver: bridge
