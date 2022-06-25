@@ -12,5 +12,8 @@ docker-dev: ## Run dev apps with docker
 api-dev: ## Run API app
 	@cd api/ && npm run start:debug
 
+api-test: ## Run API app
+	@cd api/ && npm run test
+
 ui-dev: ## Run UI app
 	@cd ui/ && npm run dev
