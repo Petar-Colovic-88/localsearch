@@ -1,0 +1,22 @@
+.title {
+  margin: 0;
+  line-height: 1.25;
+  font-size: 4rem;
+}
+
+.group {
+  padding-bottom: 0.5rem;
+}
+
+.indent {
+  margin-left: 1rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.list {
+  list-style: none;
+  margin: 0.5rem;
+}

@@ -6,8 +6,6 @@ services:
       - ./api:/app
     ports:
       - "${API_DEBUG_PORT:-9229}:9229"
-    environment:
-      - SWAGGER_ACTIVE=true
   ui:
     command: sh -c "npm install && npm run dev"
     volumes:
