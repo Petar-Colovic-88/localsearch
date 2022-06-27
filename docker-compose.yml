@@ -10,7 +10,6 @@ services:
   ui:
     build:
       context: ui
-      # dockerfile: Dockerfile.nginx
     ports:
       - "${UI_PORT:-3000}:80"
     environment:
